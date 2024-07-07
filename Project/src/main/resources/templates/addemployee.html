@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add New Employee</title>
+    <link rel="stylesheet" href="ademp-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+<div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/displayAll">View All</a></li>
+          <li><a href="/forwardAdd">Add Employee</a></li>
+          <li><a href="/displayEdit">Edit</a></li>
+          <li><a href="/forwardSearch">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- CONTAINER DISPLAY THE FORM -->
+    <div class="container">
+      <div class="addform">
+        <h3 class="heading">Enter the Employee Details</h3>
+        <!--linking with thymeleaf to get input from the user  -->
+        <form action="#" th:action="@{/save}" th:object="${employee}" method="post">
+        <!-- Table format to get the detials of employees -->
+          <table>
+            <tr>
+              <td><label for="empid">ID :</label></td>
+              <td><input type="text" th:field="*{id}" required /></td>
+            </tr>
+            <tr>
+              <td><label for="empname">Name :</label></td>
+              <td><input type="text" th:field="*{name}" required /></td>
+            </tr>
+            <tr>
+              <td><label for="empname">Gender :</label></td>
+              <td>
+                <select th:field="*{gender}">
+                  <option value="--">--Select--</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="empemail">Email :</label></td>
+              <td><input type="text" th:field="*{email}" required /></td>
+            </tr>
+            <tr>
+              <td><label for="emploc">Location :</label></td>
+              <td><input type="text" th:field="*{location}" required /></td>
+            </tr>
+            <tr>
+              <td><label for="emppho">Phone no :</label></td>
+              <td><input type="text" th:field="*{phone}" required /></td>
+            </tr>
+          </table>
+          <input type="submit" value="ADD" name="submit"/>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

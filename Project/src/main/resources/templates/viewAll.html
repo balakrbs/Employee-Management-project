@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <title>View All Employee</title>
+    <link rel="stylesheet" href="viewAll-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+<div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/displayAll">View All</a></li>
+          <li><a href="/forwardAdd">Add Employee</a></li>
+          <li><a href="/displayEdit">Edit</a></li>
+          <li><a href="/forwardSearch">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--CONTAINER TO SHOW THE LIST  -->
+    <div>
+      <div class="list">
+        <div class="container">
+          <h2>Employee List</h2>
+          <!-- Table format to display the list of employees -->
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Location</th>
+              <th>Phone</th>
+            </tr>
+            <!-- printing the data's in field using object -->
+            <tr th:each="employee : ${employees}">
+              <td th:text="${employee.id}"></td>
+              <td th:text="${employee.name}"></td>
+              <td th:text="${employee.gender}"></td>
+              <td th:text="${employee.email}"></td>
+              <td th:text="${employee.location}"></td>
+              <td th:text="${employee.phone}"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

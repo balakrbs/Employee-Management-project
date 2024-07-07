@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Management</title>
+    <link rel="stylesheet" href="search-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+ <div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/displayAll">View All</a></li>
+          <li><a href="/forwardAdd">Add Employee</a></li>
+          <li><a href="/displayEdit">Edit</a></li>
+          <li><a href="/forwardSearch">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Function to Search Id -->
+    <div class="search">
+      <div class="idsearch">
+        <h3 class="heading">Enter the Id</h3>
+        <form action="#" th:action="@{/display}" th:object="${employee}" method="get" >
+          <input type="text" th:field="*{id}" required /><br/>
+          <button>Search</button>
+        </form>
+      </div>
+      <div class="details">
+        <div class="container">
+          <h1>Employee Details</h1>
+          <!-- Error checking with thymeleaf -->
+          <div th:if="${errorMessage}">
+            <p th:text="${errorMessage}"></p>
+          </div>
+          <div th:if="${employee.id}">
+            <!-- Displaying the details in table format"-->
+            <table>
+              <tr>
+                <td><strong>ID</strong></td>
+                <td><span th:text="${employee.id}"></span></td>
+              </tr>
+              <tr>
+                <td><strong>Name</strong></td>
+                <td><span th:text="${employee.name}"></span></td>
+              </tr>
+              <tr>
+                <td><strong>Gender</strong></td>
+                <td><span th:text="${employee.gender}"></span></td>
+              </tr>
+              <tr>
+                <td><strong>Email</strong></td>
+                <td><span th:text="${employee.email}"></span></td>
+              </tr>
+              <tr>
+                <td><strong>Location</strong></td>
+                <td><span th:text="${employee.location}"></span></td>
+              </tr>
+              <tr>
+                <td><strong>Phone no</strong></td>
+                <td><span th:text="${employee.phone}"></span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Management</title>
+<link rel="stylesheet" href="home-style.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+<div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/displayAll">View All</a></li>
+          <li><a href="/forwardAdd">Add Employee</a></li>
+          <li><a href="/displayEdit">Edit</a></li>
+          <li><a href="/forwardSearch">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- TITLE OF THE PROJECT -->
+    <div class="heading">
+      <h1>EMPLOYEE MANAGEMENT<br />SYSTEM</h1>
+    </div>
+    <!-- CARD TO DISPLAY THE COUNTS OF THE EMPLOYEES -->
+      <div class="emplyeedtls">
+      
+	       <div class="card">
+	        <h2>MALE</h2>
+	        <h3><span th:text="${countM}"></span></h3>
+	      </div>
+	      
+	      <div class="card">
+	        <h2>FEMALE</h2>
+	        <h3><span th:text="${countF}"></span></h3>
+	      </div>
+	      <div class="card">
+	        <h2>OTHER</h2>
+	        <h3><span th:text="${countO}"></span></h3>
+	      </div>
+	      <div class="card">
+	        <h2>TOTAL STAFF</h2>
+	        <h3><span th:text="${countT}"></span></h3>
+	      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: url("./Images/body-background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navigation{
+    padding: 15px 0px;
+}
+
+nav{
+    text-align: center;
+}
+nav li{
+    text-align: center;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 18px;
+    padding: 6px 25px;
+    border-radius: 20px;
+    
+}
+
+nav li:hover{
+    cursor: pointer;
+    outline: 1.5px solid #ffff;
+    box-shadow: 1px 1px 5px 2px #ffff;
+    color: #00b2d1;
+}
+nav li a{
+    color: #ffff;
+    text-decoration: none;
+}
+/******** Form Style ********/
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.addform{
+    color: rgb(255, 255, 255);
+    width: 55%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(45, 117, 116);
+}
+
+.addform>.heading{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+}
+form{
+    padding-left: 10px;
+    color: #ffff;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+td{
+    padding: 10px 30px;
+    text-align: left;
+}
+label{
+    font-size: 21px;
+    margin-right: -60px;
+}
+input[type="text"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 8px;
+    font-size: 15px;
+    color:rgb(41, 41, 41);
+}
+
+select{
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-left:3px;
+    border:none;
+    outline: none;
+    width: 50%;
+    height: 40px;
+    font-size: 16px;
+}
+select>option{
+    font-size: 15px;
+}
+input[type="submit"]{
+    padding:10px 30px;
+    margin-right:35px;
+    margin-top:10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    float:right;
+    font-weight: 600;
+}
+input[type="text"],::placeholder{
+ 
+    padding-left: 30px;
+    padding-right: 30px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    outline: 1px solid #ffff;
+    background: rgb(30, 255, 1);
+}
+
+
+/******** Form Style END********/

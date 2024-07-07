@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Information Update</title>
+<link rel="stylesheet" th:href="@{/empUpdate-style.css}" />
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+<div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/displayAll">View All</a></li>
+          <li><a href="/forwardAdd">Add Employee</a></li>
+          <li><a href="/displayEdit">Edit</a></li>
+          <li><a href="/forwardSearch">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- CONTAINER DISPLAY THE FORM -->
+    <div class="container">
+      <div class="addform">
+        <h3 class="heading">Update Employee Details</h3>
+        <!--linking with thymeleaf to get input from the user  -->
+        <form action="#" th:action="@{/update}" th:object="${employees}" method="post">
+          <table>
+            <tr>
+              <td><label for="empid">ID :</label></td>
+              <td><input type="hidden" th:field="*{id}"/></td>
+              
+              <td><label for="empname">Name :</label></td>
+              <td><input type="text" th:field="*{name}" required /></td>
+            </tr>
+            
+            <tr>
+                <td><label for="empname">Gender :</label></td>
+                <td>
+                  <select th:field="*{gender}">
+                    <option value="--">--Select--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </td>
+                <td><label for="empemail">Email :</label></td>
+              <td><input type="text" th:field="*{email}" required /></td>
+            </tr>
+            <tr>
+              <td><label for="emploc">Location :</label></td>
+              <td><input type="text" th:field="*{location}" required /></td>
+              <td><label for="emppho">Phone no :</label></td>
+              <td><input type="text" th:field="*{phone}" required /></td>
+            </tr>
+          </table>
+          <input type="submit" value="UPDATE" name="submit"/>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

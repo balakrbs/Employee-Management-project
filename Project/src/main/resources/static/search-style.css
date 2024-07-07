@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: url("./Images/body-background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navigation{
+    padding: 15px 0px;
+}
+
+nav{
+    text-align: center;
+}
+nav li{
+    text-align: center;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 18px;
+    padding: 6px 25px;
+    border-radius: 20px;
+    
+}
+
+nav li:hover{
+    cursor: pointer;
+    outline: 1.5px solid #ffff;
+    box-shadow: 1px 1px 5px 2px #ffff;
+    color: #00b2d1;
+}
+nav li a{
+    color: #ffff;
+    text-decoration: none;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:2%;
+    height: 50ch;
+}
+.idsearch{
+    width: fit-content;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px 20px;
+    margin:50px 60px 0px 50px;
+}
+
+.idsearch>.heading{
+    color: #ffff;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.idsearch>form>input[type="text"]{
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    margin: 12px 0 12px 0px;
+    padding: 8px;
+    font-size: 16px;
+    color:rgb(41, 41, 41);
+}
+
+.idsearch>form>input[type="text"],::placeholder{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:center;
+    font-weight: 600;
+    color:rgb(44, 44, 44);
+    
+}
+.idsearch>form>button{
+        padding:6px 20px;
+        margin-top:25px;
+        margin-left:-70%;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+.idsearch>form>button:hover{
+    color: #ffff;
+    cursor: pointer;
+    outline: 1px solid #ffff;
+    background: transparent;     
+}
+
+
+.details{
+    width: fit-content;
+    width: fit-content;
+    padding:25px 55px; 
+    border-radius: 15px;
+    color: #ffff;
+    text-align: center;
+}
+
+.container>h2{
+    
+    margin-top: 15px;
+    color: #4d4d4d;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/***** Table *****/  
+
+table{
+    margin:25px auto 0px auto;
+    padding:20px;
+    border-collapse: collapse;   
+}
+
+tr{
+    border-bottom: 1px solid transparent;
+    background-color: #0080a0;
+}
+
+tr:nth-child(even){
+    background-color: #49b1c4;
+    padding:10px 40px;
+    border-collapse: collapse;
+    text-align: center;    
+    border-radius:40px;
+}
+
+td{
+    padding:15px 60px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/***** End Table *****/
+
